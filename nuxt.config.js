@@ -45,10 +45,11 @@ export default {
    */
   modules: [
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/markdownit',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '~/modules/static',
+    '~/modules/crawler'
   ],
   /*
    ** Build configuration

@@ -17,6 +17,7 @@ module.exports = {
   plugins: [
     'prettier'
   ],
+  ignorePatterns: ['modules', 'functions', 'node_modules/'],
   // add your custom rules here
   rules: {
   }

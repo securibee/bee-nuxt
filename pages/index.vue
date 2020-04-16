@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <logo />
+      <h3 class="text-lg text-orange-500">ima bee</h3>
       <h1 class="title">
         bee-nuxt
       </h1>
