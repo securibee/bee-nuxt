@@ -80,6 +80,21 @@ export default {
     }
   },
 
+  markdownit: {
+    injected: true,
+    breaks: true,
+    html: true,
+    linkify: true,
+    typography: true,
+    use: [
+      'markdown-it-prism',
+      'markdown-it-highlight-lines',
+      'markdown-it-link-attributes',
+      'markdown-it-anchor',
+      'markdown-it-toc-done-right'
+    ]
+  },
+
   hooks: {
     build: {
       async before(builder) {

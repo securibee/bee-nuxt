@@ -1,10 +1,15 @@
 <template>
-  <div>
+  <section>
     <h1>Dev.to blog</h1>
-    <div v-for="post in posts" :key="post.id">
-      {{ post }}
-    </div>
-  </div>
+    <article v-for="post in posts" :key="post.id">
+      <header>
+        <h2>{{ post.title }}</h2>
+        <h3>{{ post.date }}</h3>
+        <img :src="post.cover_image" :alt="post.title" />
+      </header>
+      <section v-html="$md.render(post.body_markdown)"></section>
+    </article>
+  </section>
 </template>
 
 <script>
