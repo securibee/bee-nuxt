@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   mode: 'universal',
   /*
@@ -74,6 +76,42 @@ export default {
       plugins: {
         tailwindcss: './tailwind.config.js',
         'postcss-nested': {}
+      }
+    }
+  },
+
+  hooks: {
+    build: {
+      async before(builder) {
+        const axios = require('axios')
+        const fs = require('fs')
+        const targetDir = './data'
+        let allArticles = []
+        let page = 0
+        const perPage = 30 // can go up to 1000
+        let latestResult = []
+        do {
+          page += 1 // bump page up by 1 every loop
+          latestResult = await axios(
+            `https://dev.to/api/articles/me/published?page=${page}&perPage=${perPage}`,
+            {
+              headers: {
+                'api-key': process.env.DEVTO_API_KEY
+              }
+            }
+          )
+          const { data } = latestResult
+          allArticles = allArticles.concat(data)
+        } while (latestResult.length === perPage)
+        console.log(allArticles.length)
+        fs.mkdirSync(targetDir, { recursive: true })
+        fs.writeFile(
+          `${targetDir}/devto.json`,
+          JSON.stringify(allArticles, null, 2),
+          (err) => {
+            if (err) throw err
+          }
+        )
       }
     }
   }

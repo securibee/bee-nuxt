@@ -1,0 +1,32 @@
+[
+  {
+    "type_of": "article",
+    "id": 296092,
+    "title": "Test",
+    "description": "This is a test   I wanted to see if my webhook and API works.",
+    "cover_image": "https://res.cloudinary.com/practicaldev/image/fetch/s--oww7MHeN--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://res.cloudinary.com/practicaldev/image/fetch/s--7cgH7lAd--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000/https://dev-to-uploads.s3.amazonaws.com/i/x1h3wkxbjxjxopbhubm8.jpg",
+    "published": true,
+    "published_at": "2020-04-01T01:03:39.339Z",
+    "tag_list": [
+      "testing"
+    ],
+    "slug": "test-i47",
+    "path": "/securibee/test-i47",
+    "url": "https://dev.to/securibee/test-i47",
+    "canonical_url": "https://dev.to/securibee/test-i47",
+    "comments_count": 0,
+    "positive_reactions_count": 0,
+    "page_views_count": 5,
+    "published_timestamp": "2020-04-01T01:03:39Z",
+    "body_markdown": "## This is a test\n\nI wanted to see if my webhook and API works.\n\n![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/sast3uus0ls6jhycn66x.png)",
+    "user": {
+      "name": "securibee 🐝",
+      "username": "securibee",
+      "twitter_username": "securibee",
+      "github_username": null,
+      "website_url": null,
+      "profile_image": "https://res.cloudinary.com/practicaldev/image/fetch/s--u8W08d7L--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/198142/94580a24-ec18-4d09-9393-2f7ea50efa39.png",
+      "profile_image_90": "https://res.cloudinary.com/practicaldev/image/fetch/s--ckoxVXaD--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/198142/94580a24-ec18-4d09-9393-2f7ea50efa39.png"
+    }
+  }
+]
