@@ -2,7 +2,7 @@
   <section>
     <h1>Dev.to blog</h1>
     <article v-for="post in posts" :key="post.id">
-      <nuxt-link :to="post.slug">
+      <nuxt-link :to="`/blog/${post.slug}`">
         <header>
           <h2>{{ post.title }}</h2>
           <h3>{{ post.date }}</h3>
