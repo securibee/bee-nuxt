@@ -1,25 +1,21 @@
 <template>
   <div class="container">
     <div>
-      <logo />
-      <h3 class="text-lg text-orange-500">ima bee</h3>
+      <header class="flex items-center justify-center">
+        <Logo class="w-48 h-48" />
+        <div class="text-6xl mx-6">+</div>
+        <NuxtLogo />
+        <div class="text-6xl mx-6">+</div>
+        <DevtoLogo class="w-64" />
+      </header>
       <h1 class="title">
-        bee-nuxt
+        static dev.to nuxt blog
       </h1>
       <h2 class="subtitle">
-        Bee Nuxt gets you buzzing quickly
+        Blog on the platform you love and host it yourself
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+        <nuxt-link to="blog" class="button--green">Blog</nuxt-link>
       </div>
     </div>
   </div>
@@ -27,10 +23,14 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import NuxtLogo from '~/components/NuxtLogo.vue'
+import DevtoLogo from '~/components/DevtoLogo.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    NuxtLogo,
+    DevtoLogo
   }
 }
 </script>
