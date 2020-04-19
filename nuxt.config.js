@@ -49,9 +49,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/markdownit',
-    'nuxt-webfontloader',
-    '~/modules/static',
-    '~/modules/crawler'
+    'nuxt-webfontloader'
   ],
   /*
    ** Build configuration
@@ -136,7 +134,6 @@ export default {
       const getDevtoPosts = () =>
         import('./data/devto.json').then((m) => m.default || m)
       const posts = await getDevtoPosts()
-      console.log({ posts })
       return posts.map((p) => {
         return 'blog/' + p.slug
       })
