@@ -129,5 +129,17 @@ export default {
         )
       }
     }
+  },
+
+  generate: {
+    async routes() {
+      const getDevtoPosts = () =>
+        import('./data/devto.json').then((m) => m.default || m)
+      const posts = await getDevtoPosts()
+      console.log({ posts })
+      return posts.map((p) => {
+        return 'blog/' + p.slug
+      })
+    }
   }
 }
