@@ -1,7 +1,10 @@
 <template>
   <article :class="['post', { first: isFirst }]">
     <figure class="flex-1">
-      <img :src="thumbnail" class="h-full w-full rounded-t rounded-l" />
+      <img
+        :src="thumbnail"
+        class="object-cover h-full w-full rounded-t rounded-l"
+      />
     </figure>
     <section class="p-6 rounded-r">
       <h2 class="w-full text-gray-600 text-xs md:text-sm px-6">
@@ -10,10 +13,10 @@
       <h1 class="w-full  font-bold text-xl text-gray-900 px-6">
         {{ title }}
       </h1>
-      <p
+      <div
         class="text-gray-800 font-serif text-base px-6 mb-5"
         v-html="$md.render(content)"
-      ></p>
+      ></div>
       <div class="flex-none mt-auto bg-white">
         <div class="flex items-center justify-between">
           <img

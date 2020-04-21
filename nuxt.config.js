@@ -101,7 +101,7 @@ export default {
         const axios = require('axios')
         const fs = require('fs')
         const targetDir = './data'
-        let allArticles = []
+        let allPosts = []
         let page = 0
         const perPage = 30 // can go up to 1000
         let latestResult = []
@@ -116,13 +116,13 @@ export default {
             }
           )
           const { data } = latestResult
-          allArticles = allArticles.concat(data)
+          allPosts = allPosts.concat(data)
         } while (latestResult.length === perPage)
-        console.log(allArticles.length)
+        console.log(`Fetched: ${allPosts.length} posts`)
         fs.mkdirSync(targetDir, { recursive: true })
         fs.writeFile(
           `${targetDir}/devto.json`,
-          JSON.stringify(allArticles, null, 2),
+          JSON.stringify(allPosts, null, 2),
           (err) => {
             if (err) throw err
           }
