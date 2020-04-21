@@ -13,10 +13,9 @@
       <h1 class="w-full  font-bold text-xl text-gray-900 px-6">
         {{ title }}
       </h1>
-      <div
-        class="text-gray-800 font-serif text-base px-6 mb-5"
-        v-html="$md.render(content)"
-      ></div>
+      <p class="text-gray-800 font-serif text-base px-6 mb-5">
+        {{ description }}
+      </p>
       <div class="flex-none mt-auto bg-white">
         <div class="flex items-center justify-between">
           <img
@@ -43,7 +42,7 @@ export default {
       type: String,
       default: ''
     },
-    content: {
+    description: {
       type: String,
       default: ''
     },

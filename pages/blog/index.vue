@@ -61,7 +61,7 @@
             <BlogListPost
               :is-first="isFirst(post)"
               :title="post.title"
-              :content="post.body_markdown"
+              :description="post.description"
               :thumbnail="post.cover_image"
               :published-at="post.published_at"
               :avatar="post.user.profile_image_90"
