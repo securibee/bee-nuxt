@@ -23,6 +23,7 @@
               <a
                 class="inline-block text-black no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
                 href="https://twitter.com/intent/tweet?url=#"
+                aria-label="Share blog on Twitter"
               >
                 <svg
                   class="fill-current h-4"
@@ -37,6 +38,7 @@
               <a
                 class="inline-block text-black no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
                 href="https://www.facebook.com/sharer/sharer.php?u=#"
+                aria-label="Share blog on Facebook"
               >
                 <svg
                   class="fill-current h-4"
@@ -57,6 +59,7 @@
             v-for="post in posts"
             :key="post.slug"
             :to="`/blog/${post.slug}`"
+            :aria-label="`Read more about ${post.title}`"
           >
             <BlogListPost
               :is-first="isFirst(post)"
@@ -75,7 +78,7 @@
             Subscribe to my blog
           </h2>
           <h3
-            class="font-bold break-normal font-normal text-gray-600 text-base md:text-xl"
+            class="font-bold break-normal font-normal text-gray-700 text-base md:text-xl"
           >
             We'll never give your email out
           </h3>
@@ -85,7 +88,9 @@
                 class="max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center"
               >
                 <input
+                  aria-label="Email"
                   type="email"
+                  name="email"
                   placeholder="youre@awesome.com"
                   class="flex-1 appearance-none rounded shadow p-3 text-gray-700 mr-2 focus:outline-none"
                 />
@@ -111,7 +116,7 @@
             <h4 class="text-base font-bold text-base md:text-xl leading-none">
               static dev.to nuxt blog
             </h4>
-            <p class="text-gray-600 text-xs md:text-base">
+            <p class="text-gray-700 text-xs md:text-base">
               Blog on the platform you love and host it yourself by
               <a
                 class="text-gray-800 hover:text-yellow-500 no-underline border-b-2 border-yellow-500"

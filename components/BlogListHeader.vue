@@ -5,7 +5,7 @@
   >
     <div class="container max-w-4xl mx-auto pt-16 text-center break-normal">
       <!--Title-->
-      <p class="text-white font-extrabold text-3xl md:text-5xl">
+      <p class="text-black font-extrabold text-3xl md:text-5xl">
         My dev.to blog
       </p>
     </div>

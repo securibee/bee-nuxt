@@ -3,11 +3,12 @@
     <figure class="flex-1">
       <img
         :src="thumbnail"
+        :alt="title"
         class="object-cover h-full w-full rounded-t rounded-l"
       />
     </figure>
     <section class="p-6 rounded-r">
-      <h2 class="w-full text-gray-600 text-xs md:text-sm px-6">
+      <h2 class="w-full text-gray-700 text-xs md:text-sm px-6">
         {{ publishedAt }}
       </h2>
       <h1 class="w-full  font-bold text-xl text-gray-900 px-6">
@@ -24,7 +25,7 @@
             alt="avatar"
             tabindex="0"
           />
-          <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+          <p class="text-gray-700 text-xs md:text-sm">1 MIN READ</p>
         </div>
       </div>
     </section>
