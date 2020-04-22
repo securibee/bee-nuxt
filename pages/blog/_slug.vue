@@ -15,7 +15,7 @@
           {{ post.title }}
         </h1>
       </header>
-      <img :src="post.cover_image" :alt="post.title" />
+      <img class="mx-auto" :src="post.cover_image" :alt="post.title" />
       <section
         class="max-w-3xl z-10 relative mx-auto -mt-10 bg-white p-8 post md:p-24"
         v-html="$md.render(post.body_markdown)"
