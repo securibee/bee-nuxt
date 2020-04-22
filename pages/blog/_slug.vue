@@ -36,7 +36,8 @@ export default {
   async asyncData({ params }) {
     const posts = await getDevtoPosts()
     const post = posts.find((p) => p.slug === params.slug)
-
+    // inject TOC
+    post.body_markdown = `\n[[toc]]\n${post.body_markdown}`
     return {
       post
     }

@@ -89,8 +89,24 @@ export default {
     use: [
       'markdown-it-prism',
       'markdown-it-highlight-lines',
-      'markdown-it-link-attributes',
-      'markdown-it-anchor',
+      [
+        'markdown-it-link-attributes',
+        {
+          pattern: /(http|https|ftp|ftps):\/\/[a-zA-Z0-9\-.]+\.[a-zA-Z]{2,3}(\/\S*)?/,
+          attrs: {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          }
+        }
+      ],
+      [
+        'markdown-it-anchor',
+        {
+          permalink: true,
+          permalinkBefore: true,
+          permalinkSymbol: '🔗'
+        }
+      ],
       'markdown-it-toc-done-right'
     ]
   },
