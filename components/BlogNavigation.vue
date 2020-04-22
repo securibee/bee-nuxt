@@ -13,9 +13,9 @@
         </ul>
       </div>
 
-      <div class="flex w-1/2 justify-end content-center">
+      <div class="flex w-1/2 justify-end items-center -mt-1">
         <a
-          class="inline-block text-black no-underline border-t-4 border-transparent hover:border-black text-center h-10 p-2 md:h-auto md:p-4"
+          class="inline-block text-black no-underline border-t-4 border-transparent hover:border-black text-center h-10 p-2 md:h-auto"
           href="https://twitter.com/intent/tweet?url=#"
           aria-label="Share blog on Twitter"
         >
@@ -30,7 +30,7 @@
           </svg>
         </a>
         <a
-          class="inline-block text-black no-underline border-t-4 border-transparent hover:border-black text-center h-10 p-2 md:h-auto md:p-4"
+          class="inline-block text-black no-underline border-t-4 border-transparent hover:border-black text-center h-10 p-2 md:h-auto"
           href="https://www.facebook.com/sharer/sharer.php?u=#"
           aria-label="Share blog on Facebook"
         >
