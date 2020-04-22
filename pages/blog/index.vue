@@ -127,7 +127,7 @@ export default {
 
   methods: {
     isFirst(post) {
-      return this.posts[0].slug === post.slug
+      return this.sortedPosts[0].slug === post.slug
     }
   }
 }
