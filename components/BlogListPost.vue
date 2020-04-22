@@ -7,14 +7,14 @@
         class="object-cover h-full w-full rounded-t rounded-l"
       />
     </figure>
-    <section class="p-6 rounded-r">
-      <h2 class="w-full text-gray-700 text-xs md:text-sm px-6">
-        {{ publishedAt }}
+    <section class="p-6 rounded-r flex flex-col">
+      <h2 class="w-full text-gray-700 text-xs md:text-sm">
+        {{ date }}
       </h2>
-      <h1 class="w-full  font-bold text-xl text-gray-900 px-6">
+      <h1 class="w-full  font-bold text-xl text-gray-900">
         {{ title }}
       </h1>
-      <p class="text-gray-800 font-serif text-base px-6 mb-5">
+      <p class="text-gray-800 font-serif text-base mb-5">
         {{ description }}
       </p>
       <div class="flex-none mt-auto bg-white">
@@ -59,13 +59,20 @@ export default {
       type: String,
       default: ''
     }
+  },
+
+  computed: {
+    date() {
+      const date = new Date(this.publishedAt)
+      return date.toDateString()
+    }
   }
 }
 </script>
 
 <style lang="postcss" scoped>
 .post {
-  @apply flex bg-white rounded-t rounded-b-none overflow-hidden shadow-lg;
+  @apply flex flex-col bg-white rounded-t rounded-b-none overflow-hidden shadow-lg;
 
   &.first {
     @apply flex-row;

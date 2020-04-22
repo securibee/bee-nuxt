@@ -6,6 +6,7 @@
         <BlogNavigation />
         <div class="posts">
           <nuxt-link
+            class="flex"
             v-for="post in posts"
             :key="post.slug"
             :to="`/blog/${post.slug}`"
@@ -133,7 +134,7 @@ export default {
   grid-gap: 2rem;
   row-gap: 3rem;
   @screen md {
-    & > div:first-child {
+    & > *:first-child {
       grid-column: span 2;
     }
   }
