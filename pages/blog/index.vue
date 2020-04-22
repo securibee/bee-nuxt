@@ -6,9 +6,9 @@
         <BlogNavigation />
         <div class="posts">
           <nuxt-link
-            class="flex"
             v-for="post in posts"
             :key="post.slug"
+            class="flex"
             :to="`/blog/${post.slug}`"
             :aria-label="`Read more about ${post.title}`"
           >

@@ -25,7 +25,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/css/prism.css', '@/assets/css/main.css'],
   /*
    ** Plugins to load before mounting the App
    */
