@@ -1,8 +1,18 @@
 <template>
-  <div>
+  <div class="relative min-h-screen pb-32">
     <nuxt />
+    <BlogFooter />
   </div>
 </template>
+
+<script>
+const BlogFooter = () => import('~/components/BlogFooter')
+export default {
+  components: {
+    BlogFooter
+  }
+}
+</script>
 
 <style>
 html {

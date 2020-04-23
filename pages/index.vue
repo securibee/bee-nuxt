@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>
+    <section>
       <header class="flex items-center justify-center">
         <Logo class="w-48 h-48" />
         <div class="text-6xl mx-6">+</div>
@@ -17,7 +17,7 @@
       <div class="links">
         <nuxt-link to="blog" class="button--green">Blog</nuxt-link>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 

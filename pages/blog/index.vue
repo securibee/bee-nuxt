@@ -79,7 +79,6 @@
         </div>
       </div>
     </div>
-    <BlogListFooter />
   </div>
 </template>
 
@@ -88,14 +87,12 @@ const getDevtoPosts = () =>
   import('~/data/devto.json').then((m) => m.default || m)
 const BlogListHeader = () => import('~/components/BlogListHeader')
 const BlogListPost = () => import('~/components/BlogListPost')
-const BlogListFooter = () => import('~/components/BlogListFooter')
 const BlogNavigation = () => import('~/components/BlogNavigation')
 
 export default {
   components: {
     BlogListHeader,
     BlogListPost,
-    BlogListFooter,
     BlogNavigation
   },
 
