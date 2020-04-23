@@ -1,6 +1,6 @@
 <template>
-  <div class="relative min-h-screen pb-32">
-    <nuxt />
+  <div class="relative flex flex-col min-h-screen">
+    <nuxt class="flex-1" />
     <BlogFooter />
   </div>
 </template>

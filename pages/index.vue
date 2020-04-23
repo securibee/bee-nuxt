@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container pb-24">
     <section>
       <header class="flex items-center justify-center">
         <Logo class="w-48 h-48" />
