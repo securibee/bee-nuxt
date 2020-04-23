@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen pb-32">
+  <div class="relative min-h-screen">
     <BlogNavigation />
     <article class="container mx-auto">
       <header class="text-center pt-16 md:pt-32">
@@ -21,6 +21,10 @@
         v-html="$md.render(post.body_markdown)"
       />
     </article>
+    <CallToAction
+      :author="post.user.username"
+      :avatar="post.user.profile_image_90"
+    />
   </div>
 </template>
 
@@ -28,10 +32,12 @@
 const getDevtoPosts = () =>
   import('~/data/devto.json').then((m) => m.default || m)
 const BlogNavigation = () => import('@/components/BlogNavigation')
+const CallToAction = () => import('~/components/CallToAction')
 
 export default {
   components: {
-    BlogNavigation
+    BlogNavigation,
+    CallToAction
   },
 
   async asyncData({ params }) {
