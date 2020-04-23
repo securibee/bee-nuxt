@@ -6,7 +6,7 @@
         <BlogNavigation />
         <div class="posts">
           <nuxt-link
-            v-for="post in sortedPosts"
+            v-for="post in posts"
             :key="post.slug"
             :to="`/blog/${post.slug}`"
             :aria-label="`Read more about ${post.title}`"
@@ -116,18 +116,12 @@ export default {
 
     author() {
       return this.posts.length > 0 ? this.posts[0].user.name : 'unknown'
-    },
-
-    sortedPosts() {
-      return this.posts
-        .slice()
-        .sort((a, b) => new Date(a.published_at) - new Date(b.published_at))
     }
   },
 
   methods: {
     isFirst(post) {
-      return this.sortedPosts[0].slug === post.slug
+      return this.posts[0].slug === post.slug
     }
   }
 }
