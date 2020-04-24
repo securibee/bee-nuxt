@@ -16,7 +16,9 @@
       <div class="flex w-1/2 justify-end items-center -mt-1">
         <a
           class="inline-block text-black no-underline border-t-4 border-transparent hover:border-black text-center h-10 p-2 md:h-auto"
-          href="https://twitter.com/intent/tweet?url=#"
+          :href="
+            `https://twitter.com/intent/tweet?url=${domain}&text=Check this blog out!`
+          "
           aria-label="Share blog on Twitter"
         >
           <svg
@@ -31,7 +33,7 @@
         </a>
         <a
           class="inline-block text-black no-underline border-t-4 border-transparent hover:border-black text-center h-10 p-2 md:h-auto"
-          href="https://www.facebook.com/sharer/sharer.php?u=#"
+          :href="`https://www.facebook.com/sharer/sharer.php?u=${domain}`"
           aria-label="Share blog on Facebook"
         >
           <svg
@@ -57,6 +59,12 @@ export default {
         { title: 'home', slug: '' },
         { title: 'blog', slug: 'blog' }
       ]
+    }
+  },
+
+  computed: {
+    domain() {
+      return process.env.DOMAIN
     }
   }
 }
