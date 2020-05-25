@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-24">
+  <div class="container mx-auto flex items-center justify-center py-24">
     <section>
       <header class="flex items-center justify-center flex-col md:flex-row">
         <Logo class="w-48 h-48" />
