@@ -1,8 +1,16 @@
 # bee-nuxt
 
-> Bee Nuxt gets you buzzing quickly
+> Note: this project was build before Nuxt.js released its build-in static content features. I'd encourage you to use that instead.
 
-## Build Setup
+Use the Dev.to platform to blog and statically host it yourself using Nuxt.js.
+To achieve this we retrieve all posts during build and store them in a json file using `https://dev.to/api/articles/me/published` endpoint.
+
+## Setup
+
+Set dev.to environment variable
+```
+DEVTO_API_KEY=secret_key
+```
 
 ```bash
 # install dependencies
