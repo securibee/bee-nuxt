@@ -1,4 +1,4 @@
-# bee-nuxt
+# Dev.to + Nuxt.js = Bee Nuxt
 
 > Note: this project was build before Nuxt.js released its build-in static content features. I'd encourage you to use that instead.
 
